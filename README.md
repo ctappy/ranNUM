@@ -1,4 +1,4 @@
-#Random number generator using stock prices and random temperatures
+#Random number generator using random stock prices and random temperatures
 
 
 RAN.s_SYMBOL - random stock symbol

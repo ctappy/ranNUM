@@ -57,7 +57,7 @@ end
 #puts RAN.number
 
 #prints a random number below the number in parentheses
-puts RAN.num(10)
+#puts RAN.num(10)
 
 #prints a random number below the number in parentheses rounded
 #puts RAN.num(10).round

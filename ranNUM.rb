@@ -56,8 +56,8 @@ end
 #prints random stock * random temperature
 #puts RAN.number
 
-#prints a random number below the number in parentheses
+#prints a random number equal to or below the number in parentheses
 #puts RAN.num(10)
 
-#prints a random number below the number in parentheses rounded
+#prints a random number equal to or below the number in parentheses rounded
 #puts RAN.num(10).round

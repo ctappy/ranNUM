@@ -1,6 +1,9 @@
 #Random number generator using random stock prices and random temperatures
 
-#Installation: gem install ranNUM
+#Installation: 
+gem install ranNUM
+
+#Class.functions
 
 RAN.s_SYMBOL - random stock symbol
 

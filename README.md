@@ -1,19 +1,12 @@
-Random number generator using stock prices and random temperatures
+#Random number generator using stock prices and random temperatures
 
-print random stock symbol
-puts RAN.s_SYMBOL
 
-print random temperature - 
-puts RAN.w_TEMP
+puts RAN.s_SYMBOL - print random stock symbol
 
-print random stock price - 
-puts RAN.y_STOCK
+puts RAN.w_TEMP - print random temperature
 
-prints random stock * random temperature - 
-puts RAN.number
+puts RAN.y_STOCK - print random stock price
 
-prints a random number equal to or below the number in parentheses - 
-puts RAN.num(10)
+puts RAN.number - prints random stock price * random temperature
 
-prints a random number equal to or below the number in parentheses rounded - 
-puts RAN.num(10).round
+puts RAN.num(10) - prints a random number equal to or below the number in parentheses

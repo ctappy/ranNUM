@@ -40,9 +40,9 @@ RAN.num(10) - a random number equal to or below the number in parentheses
 
 -use another type of source
 
- -CPU temperature
+ --CPU temperature
  
- -twitter
+ --twitter
  
 -change out rand function from ruby to more personal random number generator when picking
 

@@ -1,7 +1,7 @@
 #Random number generator 
 
-use 6500 random stock prices and 10000 random city temperatures. 
-randomness between up to 1-100 is accurate but I have not implemented scaling beyond that yet. In a future release I will add up to a million unless someone requests otherwise.
+Uses 6500 random stock prices and 10000 random city temperatures. 
+Randomness between up to 1-100 is accurate but I have not implemented scaling beyond that yet. In a future release I will add up to a million unless someone requests otherwise.
 
 #Requires:
 Internet connection

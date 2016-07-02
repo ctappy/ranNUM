@@ -83,4 +83,4 @@ end
 #puts RAN.num(10)
 
 #prints a random number equal to or below the number in parentheses rounded
-puts RAN.num(10).round
+#puts RAN.num(10).round

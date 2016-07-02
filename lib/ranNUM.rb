@@ -26,8 +26,8 @@ end
 apis.each do |api|
   api if options[:owmapistore]
 
-  #puts api
-  File.open('./textfiles/owmapi.txt', "w") do |f|
+    owm_path = File.join( File.dirname(__FILE__), './textfiles/owmapi.txt' )
+  File.open(owm_path, "w") do |f|
       f.write api
   end
 end
@@ -46,7 +46,9 @@ class RAN
         File.open( owm_path )
     end
     def self.owmapi
-        File.read('./textfiles/owmapi.txt')
+
+    owm_path2 = File.join( File.dirname(__FILE__), './textfiles/owmapi.txt' )
+        File.read( owm_path2)
     end
 #get stock data
     def self.get_yql_data(ticker)
@@ -116,4 +118,5 @@ end
 #puts RAN.num(10)
 
 #prints a random number equal to or below the number in parentheses rounded
+
 #puts RAN.num(10).round

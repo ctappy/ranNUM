@@ -3,10 +3,10 @@ require 'net/http'
 
 
 class RAN
-def self.sp500file
-    sp500_path = File.join( File.dirname(__FILE__), './textfiles/SP500.txt' )
-    File.open( sp500_path )
-end
+    def self.sp500file
+        sp500_path = File.join( File.dirname(__FILE__), './textfiles/SP500.txt' )
+        File.open( sp500_path )
+    end
 def self.nnstocksfile
     nnstocks_path = File.join( File.dirname(__FILE__), './textfiles/nnstocks.txt' )
     File.open( nnstocks_path )

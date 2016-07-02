@@ -1,6 +1,36 @@
 require 'json'
 require 'net/http'
+require 'optparse'
 
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "\nRandom Number Generator.\n"
+
+  opts.on("-o", "--owmapi", "Adds Open Weather API for example -o 'API'") do |u|
+    options[:owmapistore] = u
+  end
+
+  opts.on("-h", "--help", "Displays help page") do
+    puts opts
+    exit
+  end
+end.parse!
+
+apis = []
+
+ARGV.each do |api|
+  apis << api.dup
+end
+
+apis.each do |api|
+  api if options[:owmapistore]
+
+  #puts api
+  File.open('./textfiles/owmapi.txt', "w") do |f|
+      f.write api
+  end
+end
 
 class RAN
     def self.sp500file
@@ -14,6 +44,9 @@ class RAN
     def self.owmfile
         owm_path = File.join( File.dirname(__FILE__), './textfiles/owmid.txt' )
         File.open( owm_path )
+    end
+    def self.owmapi
+        File.read('./textfiles/owmapi.txt')
     end
 #get stock data
     def self.get_yql_data(ticker)
@@ -41,7 +74,7 @@ class RAN
     def self.w_TEMP
         random_string_weather = rand(10000)
         city = IO.readlines(RAN.owmfile)[random_string_weather]
-        api_owm = "4610a14e77ea7d2522ef38eed4bbee0c"
+        api_owm = RAN.owmapi
         output_weather = get_owm_data(city, api_owm)
         output_weather["main"]["temp"]
     end

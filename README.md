@@ -26,6 +26,7 @@ RAN.number - (random stock price * random temperature + 1) * (random stock price
 RAN.num(10) - a random number equal to or below the number in parentheses
 
 Flags
+
 "-o", "--owmapi", Adds Open Weather API for example -o 'API'
 
 "-h", "--help", Displays help page
@@ -33,8 +34,6 @@ Flags
 #Future updates:
 
 #Version 2.0+
-
--Add function to add personal Open Weather Maps API
 
 -more accurate randomness, the possibility of 1 is still high - needs function to throw out nil
 

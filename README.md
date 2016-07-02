@@ -48,7 +48,7 @@ ruby ~/.gem/ruby/{version}/gems/ranNUM-{version}/lib/ranNUM.rb -o 'api'
 ```
 or
 
-echo 'api > ~/.gem/ruby/{version}/gems/ranNUM-{version}/lib/textfiles/owmapi.txt -o 'api'
+echo 'api' > ~/.gem/ruby/{version}/gems/ranNUM-{version}/lib/textfiles/owmapi.txt
 Future updates:
 -----
 

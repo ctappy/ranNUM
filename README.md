@@ -25,6 +25,10 @@ RAN.number - (random stock price * random temperature + 1) * (random stock price
 
 RAN.num(10) - a random number equal to or below the number in parentheses
 
+Flags
+"-o", "--owmapi", Adds Open Weather API for example -o 'API'
+"-h", "--help", Displays help page
+
 #Future updates:
 
 #Version 2.0+

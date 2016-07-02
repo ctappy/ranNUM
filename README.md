@@ -59,7 +59,7 @@ Version 2.0+
 * higher random numbers up to a million
 
 
-#version 3.0+
+version 3.0+
 -----
 
 * use another type of source

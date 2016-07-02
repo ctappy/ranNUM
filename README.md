@@ -24,13 +24,13 @@ Class.functions
 -----
 
 ```
-* RAN.s_SYMBOL - random stock symbol from S&P500
-* RAN.s_SYMBOL2 - random stock symbol from list of 5900 stocks
-* RAN.w_TEMP - random temperature
-* RAN.y_STOCK - random stock price from S&P500
-* RAN.y_STOCK2 - random stock price from list of 5900 stocks
-* RAN.number - (random stock price * random temperature + 1) * (random stock price 2 + 1)
-* RAN.num(10) - a random number equal to or below the number in parentheses
+RAN.s_SYMBOL - random stock symbol from S&P500
+RAN.s_SYMBOL2 - random stock symbol from list of 5900 stocks
+RAN.w_TEMP - random temperature
+RAN.y_STOCK - random stock price from S&P500
+RAN.y_STOCK2 - random stock price from list of 5900 stocks
+RAN.number - (random stock price * random temperature + 1) * (random stock price 2 + 1)
+RAN.num(10) - a random number equal to or below the number in parentheses
 ```
 
 Flags

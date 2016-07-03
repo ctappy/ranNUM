@@ -73,24 +73,32 @@ class RAN
         resp = Net::HTTP.get_response(URI.parse(url))
         JSON.parse(resp.body)
     end
+
     def self.w_TEMP
         random_string_weather = rand(10000)
         city = IO.readlines(RAN.owmfile)[random_string_weather]
         api_owm = RAN.owmapi
         output_weather = get_owm_data(city, api_owm)
-        output_weather["main"]["temp"]
+        if output_weather["main"]["temp"] > 0
+            output_weather["main"]["temp"]
+        end
     end
+
     def self.y_STOCK
         output_stock = RAN.get_yql_data(RAN.s_SYMBOL)
         output_stock["query"]["results"]["quote"]["Ask"]
     end
+
     def self.y_STOCK2
         output_stock = RAN.get_yql_data(RAN.s_SYMBOL2)
-        output_stock["query"]["results"]["quote"]["Ask"]
+        outstock = output_stock["query"]["results"]["quote"]["Ask"]
+        outstock = outstock.to_i
     end
+
     def self.number
         (RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(RAN.s_SYMBOL2.to_f+1)
     end
+
     def self.num(rnNUM)
         tensecond_RN = RAN.number
             begin
@@ -99,6 +107,7 @@ class RAN
             end while tensecond_RN > rnNUM
         tensecond_RN.abs
     end
+
 end
 
 #print random stock symbol
@@ -106,9 +115,43 @@ end
 
 #print random temperature
 #puts RAN.w_TEMP
+#puts RAN.w_TEMP
+#puts RAN.w_TEMP
+#puts RAN.w_TEMP
+#puts RAN.w_TEMP
 
 #print random stock price
-#puts RAN.y_STOCK
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
+puts RAN.y_STOCK2
 #puts RAN.y_STOCK2
 
 #prints random stock * random temperature

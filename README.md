@@ -36,7 +36,7 @@ RAN.num(10) - a random number equal to or below the number in parentheses
 Flags
 -----
 
-* "-o", "--owmapi", Adds Open Weather API for example "ruby ranNUM.rb -o 'API'
+* "-o", "--owmapi", Adds Open Weather API for example "ruby ranNUM.rb -o 'API'"
 * "-h", "--help", Displays help page
 
 Gem

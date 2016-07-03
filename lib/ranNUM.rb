@@ -79,21 +79,34 @@ class RAN
         city = IO.readlines(RAN.owmfile)[random_string_weather]
         api_owm = RAN.owmapi
         output_weather = get_owm_data(city, api_owm)
-        if output_weather["main"]["temp"] > 0
-            output_weather["main"]["temp"]
-        end
+        weathertemp = output_weather["main"]["temp"]
+            unless weathertemp.nil? 
+                weathertemp
+            else
+                RAN.w_TEMP
+            end
     end
 
     def self.y_STOCK
         output_stock = RAN.get_yql_data(RAN.s_SYMBOL)
-        output_stock["query"]["results"]["quote"]["Ask"]
+        stockprice1 = output_stock["query"]["results"]["quote"]["Ask"]
+            unless stockprice1.nil? 
+                stockprice1
+            else
+                RAN.y_STOCK
+            end
     end
 
     def self.y_STOCK2
         output_stock = RAN.get_yql_data(RAN.s_SYMBOL2)
-        outstock = output_stock["query"]["results"]["quote"]["Ask"]
-        outstock = outstock.to_i
+        stockprice2 = output_stock["query"]["results"]["quote"]["Ask"]
+            unless stockprice2.nil? 
+                stockprice2
+            else
+                RAN.y_STOCK2
+            end
     end
+
 
     def self.number
         (RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(RAN.s_SYMBOL2.to_f+1)
@@ -115,43 +128,10 @@ end
 
 #print random temperature
 #puts RAN.w_TEMP
-#puts RAN.w_TEMP
-#puts RAN.w_TEMP
-#puts RAN.w_TEMP
-#puts RAN.w_TEMP
 
 #print random stock price
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
-puts RAN.y_STOCK2
+#puts RAN.y_STOCK
+
 #puts RAN.y_STOCK2
 
 #prints random stock * random temperature

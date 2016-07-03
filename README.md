@@ -55,7 +55,6 @@ Future updates:
 Version 2.0+
 -----
 
-* more accurate randomness, the possibility of 1 is still high - needs function to throw out nil
 * higher random numbers up to a million
 
 

@@ -64,6 +64,6 @@ version 3.0+
 * use another type of source
 * CPU temperature
 * twitter
-* change out rand function from ruby to more personal random number generator when picking
+* change out rand function from ruby
 * improve general equation
 

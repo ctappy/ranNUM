@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ranNUM'
-  s.version     = '1.3.0'
+  s.version     = '1.3.1'
   s.date        = '2016-07-03'
   s.summary     = "Random Number generator"
   s.description = "A simple random number generator using random temperature and stock prices"

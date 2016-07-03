@@ -67,8 +67,8 @@ class RAN
     end
 #get weather data
     def self.get_owm_data(city_id, api_key)
-        #url = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&units=imperial&APPID=#{api_key}" #in fahrenheit
-        url = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&units=metric&APPID=#{api_key}" #in celcius
+        url = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&units=imperial&APPID=#{api_key}" #in fahrenheit
+        #url = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&units=metric&APPID=#{api_key}" #in celcius
         #url = "http://api.openweathermap.org/data/2.5/weather?id=#{city_id}&APPID=#{api_key}" #in kelvin
         resp = Net::HTTP.get_response(URI.parse(url))
         JSON.parse(resp.body)
@@ -83,6 +83,7 @@ class RAN
             unless weathertemp.nil? 
                 weathertemp
             else
+                sleep(1)
                 RAN.w_TEMP
             end
     end
@@ -109,7 +110,7 @@ class RAN
 
 
     def self.number
-        (RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(RAN.s_SYMBOL2.to_f+1)
+        (rand(11)*RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(rand(6)*RAN.s_SYMBOL2.to_f+1*RAN.w_TEMP.to_f+1)
     end
 
     def self.num(rnNUM)
@@ -138,7 +139,7 @@ end
 #puts RAN.number
 
 #prints a random number equal to or below the number in parentheses
-#puts RAN.num(10)
+#puts RAN.num(1000000)
 
 #prints a random number equal to or below the number in parentheses rounded
 

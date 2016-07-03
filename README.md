@@ -1,8 +1,7 @@
 Random number generator 
 =============
 
-Uses 6500 random stock prices and 10000 random city temperatures. 
-Randomness between 1-100,000 is accurate but I have not implemented scaling beyond that yet. In a future release I will add up to a million unless someone requests otherwise.
+Uses 6500 random stock prices and 10000 random city temperatures.
 
 Usage
 -----
@@ -29,7 +28,8 @@ RAN.s_SYMBOL2 - random stock symbol from list of 5900 stocks
 RAN.w_TEMP - random temperature
 RAN.y_STOCK - random stock price from S&P500
 RAN.y_STOCK2 - random stock price from list of 5900 stocks
-RAN.number - (random stock price * random temperature + 1) * (random stock price 2 + 1)
+RAN.number - (random number * random stock price * random temperature + 1) * (random number * random stock price * random temperature + 1)
+
 RAN.num(10) - a random number equal to or below the number in parentheses
 ```
 

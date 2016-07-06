@@ -1,4 +1,4 @@
-Random number generator 
+True Random number generator 
 =============
 
 Uses 6500 random stock prices and 10000 random city temperatures.

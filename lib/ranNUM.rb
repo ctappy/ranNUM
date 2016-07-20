@@ -110,14 +110,14 @@ class RAN
 
 
     def self.number
-        (rand(11)*RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(rand(6)*RAN.s_SYMBOL2.to_f+1*RAN.w_TEMP.to_f+1)
+        (rand(11)*RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(rand(6)*RAN.s_SYMBOL2.to_f+1)
     end
 
     def self.num(rnNUM)
         tensecond_RN = RAN.number
             begin
                 #puts tensecond_RN
-                tensecond_RN /=10
+                tensecond_RN /=rnNUM
             end while tensecond_RN > rnNUM
         tensecond_RN.abs
     end
@@ -143,4 +143,4 @@ end
 
 #prints a random number equal to or below the number in parentheses rounded
 
-#puts RAN.num(10).round
+#puts RAN.num(3).round

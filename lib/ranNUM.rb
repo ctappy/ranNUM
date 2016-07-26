@@ -137,10 +137,10 @@ end
 #puts RAN.y_STOCK2
 
 #prints random stock * random temperature
-puts RAN.number(1000000)
+#puts RAN.number(1000000)
 
 #prints a random number equal to or below the number in parentheses
-puts RAN.num(1000000)
+#puts RAN.num(1000000)
 
 #prints a random number equal to or below the number in parentheses rounded
 

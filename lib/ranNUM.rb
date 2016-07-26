@@ -109,16 +109,18 @@ class RAN
     end
 
 
-    def self.number
-        (rand(11)*RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(rand(6)*RAN.s_SYMBOL2.to_f+1)
+    def self.number(n = 11)
+         n = Math.sqrt(n)**2
+        (rand(n)*RAN.y_STOCK.to_f*RAN.w_TEMP.to_f+1)*(rand(n)*RAN.s_SYMBOL2.to_f+1)
     end
 
-    def self.num(rnNUM)
-        aRN = RAN.number
-            begin
-                aRN /=rnNUM
-            end while aRN > rnNUM
-        aRN.abs
+    def self.num(num)
+        a_ran_num = RAN.number(num)
+        a_ran_num_sq = a_ran_num ** 5 * 10
+        while a_ran_num_sq > num
+            a_ran_num_sq /=num
+        end
+        a_ran_num_sq.abs
     end
 
 end
@@ -135,11 +137,11 @@ end
 #puts RAN.y_STOCK2
 
 #prints random stock * random temperature
-#puts RAN.number
+puts RAN.number(1000000)
 
 #prints a random number equal to or below the number in parentheses
-#puts RAN.num(1000000)
+puts RAN.num(1000000)
 
 #prints a random number equal to or below the number in parentheses rounded
 
-puts RAN.num(22).round
+#puts RAN.num(100000).round
